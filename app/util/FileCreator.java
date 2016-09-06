@@ -35,7 +35,7 @@ public class FileCreator {
             String command = getFfmpegCommand(audioFile.toPath(), picFile.toPath(),resFilePath);
             System.out.println(command);
             Process process = Runtime.getRuntime().exec(command, null, picFile.toPath().getParent().toAbsolutePath().toFile());
-            InputStream in = process.getErrorStream();
+            InputStream in = process.getErrorStream();//
             int c;
             while ((c = in.read()) != -1)
             {
